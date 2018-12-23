@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Laboratorio 2- Dario Monestel Corella </title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/currency-flags.min.css">
+	<style> body { background-color: #000000; } </style>
+	<style> title { color:#FFFFFF; } </style>
+	<style> header { background-color:#FFFFFF; } </style>
+</head>
+
+
+
+<body>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+			<br/>
+			<h3 style="color:#FFFFFF">
+				Laboratorio 2- Dario Monestel Corella
+			</h3>
+			<nav style="color:#FFFFFF" class="navbar navbar-default" role="navigation">
+				<h2 style="color:#FFFFFF"> Conversor de divisas</h2>
+		        	<ul class="nav navbar-nav">
+                		<li><a style="color:#FFFFFF" href="index.html">Inicio</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a style="color:#FFFFFF" href="favoritos.html">Otras monedas</a> &nbsp; &nbsp; &nbsp; &nbsp;
+                		 <a style="color:#FFFFFF" href="index2.html">Tema blanco</a></li>
+                		<!--<li><a style="color:#FFFFFF" href="favoritos.html">Otras monedas</a></li>-->
+                	
+              		</ul>
+              	
+
+			</nav>
+			<form id="coversionForm" role="form">
+				<div class="form-group">
+					<br/>
+					<br/>
+					<br/>
+					<label for="fromCurrency" style="color:#FFFFFF" for="fromCurrency ">Moneda de Origen: </label>
+					<select id="fromCurrency" class="form-control" required></select>
+				</div>
+				<div class="form-group">
+					<label for="inputQuantity" style="color:#FFFFFF" for="col-xs-5">
+						Cantidad a convertir: 
+					</label>
+					<input type="number" min="0"  pattern="[0-9]+([\.,][0-9]+)?" step="0.01" class="form-control" id="inputQuantity" placeholder="Cantidad a convertir" required >
+				</div>
+				<button type="submit" class="btn btn-primary">
+					¡Convertir!
+				</button>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<table  class="table table-bordered" style="color:#FFFFFF">
+			
+				<thead>
+					<tr>
+						<th>Bandera</th>
+                        <th>Código</th>
+                        <th>Moneda</th>
+                        <th>Valor</th>
+					</tr>
+				</thead>
+				<tbody id="tblBodyCurrency"></tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+    <script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
